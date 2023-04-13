@@ -15,10 +15,11 @@ class Rectangle {
 
 class Square extends Rectangle {
 	getPerimeter(){
-		return (2*(length+width));
+		return (2*(this._length+this._width));
 	}
 }
-
+var rec = new Rectangle(5,7);
+console.log(rec.getArea());
 // Do not change the code below this line
 window.Rectangle = Rectangle;
 window.Square = Square;
