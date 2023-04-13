@@ -4,8 +4,10 @@ class Rectangle {
 		this._width = width;
 		this._height = height;
 	}
-	get details(){
+	get width(){
 		return this._width;
+	}
+	get width(){
 		return this._height;
 	}
 	getArea(){
@@ -14,12 +16,13 @@ class Rectangle {
 }
 
 class Square extends Rectangle {
-	getPerimeter(){
-		return (2*(this._length+this._width));
-	}
+	constructor(side) {
+    super(side, side);
+  }
+  getPerimeter() {
+    return 4 * this._width;
+  }
 }
-var rec = new Rectangle(5,7);
-console.log(rec.getArea());
 // Do not change the code below this line
 window.Rectangle = Rectangle;
 window.Square = Square;
